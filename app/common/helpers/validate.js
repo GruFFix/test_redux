@@ -1,4 +1,7 @@
 import setFn from 'lodash/set';
+import { addValidation } from 'react-nebo15-validate';
+
+const IMAGE_URL_VALID_TEMPLATE = /^http(s):\/\/.+\.(gif|png|jpg|jpeg)$/i;
 
 export const mapServerErrorsToClient = (
   error, mapServerToClient = {}
@@ -19,3 +22,9 @@ export const mapServerErrorsToClient = (
   }, {}));
   return prev;
 }, {});
+
+addValidation('imageUrl', url => {
+  const isValid = IMAGE_URL_VALID_TEMPLATE.test(url);
+
+  return isValid;
+});

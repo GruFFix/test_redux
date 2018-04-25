@@ -11,6 +11,7 @@ import CheckBox from '@/components/CheckBox';
 import Button from '@/components/Button';
 
 import { reduxFormValidate } from 'react-nebo15-validate';
+import { imageUrlValidation } from '@/helpers/validate';
 
 const MovieForm = ({ initialValues, handleSubmit, t }) => {
 
@@ -55,6 +56,7 @@ export default compose(
       },
       poster: {
         required: true,
+        imageUrl: true,
       },
       description: {
         required: true,
