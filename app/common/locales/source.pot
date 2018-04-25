@@ -5,10 +5,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-04-23T13:29:57.410Z\n"
-"PO-Revision-Date: 2018-04-23T13:29:57.410Z\n"
+"POT-Creation-Date: 2018-04-25T10:30:54.361Z\n"
+"PO-Revision-Date: 2018-04-25T10:30:54.361Z\n"
 
 msgid "Required field"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Create"
 msgstr ""
 
 msgid "Title"
@@ -26,13 +32,22 @@ msgstr ""
 msgid "Director"
 msgstr ""
 
-msgid "Create"
+msgid "My favorite"
 msgstr ""
 
 msgid "Create new movie"
 msgstr ""
 
 msgid "Back to the list of movies"
+msgstr ""
+
+msgid "Edit movie"
+msgstr ""
+
+msgid "Delete movie"
+msgstr ""
+
+msgid "Back to detail page"
 msgstr ""
 
 msgid "Add new movie"
