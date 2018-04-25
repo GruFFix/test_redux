@@ -6,17 +6,12 @@ import { compose } from 'recompose';
 
 import styles from './styles.scss';
 
-const TextInput = ({ error, ...rest }) => {
-  return (
-    <input type="checkbox" className={classnames(styles.root, error && styles.isError)} {...rest} />
-    )
+const CheckBox = ({ error, ...rest }) => <input type="checkbox" checked={rest.value} className={classnames(styles.root, error && styles.isError)} {...rest} />
 
-};
-
-TextInput.propTypes = {
+CheckBox.propTypes = {
   error: PropTypes.bool,
 };
 
 export default compose(
   withStyles(styles)
-)(TextInput);
+)(CheckBox);
