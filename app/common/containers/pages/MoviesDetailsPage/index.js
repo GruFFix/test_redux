@@ -9,6 +9,7 @@ import { getMovie } from '@/reducers';
 
 import Poster from '@/components/Poster';
 import Button from '@/components/Button';
+import MyFavoriteIco from '@/components/MyFavoriteIco';
 
 import withStyles from 'withStyles';
 import styles from './styles.scss';
@@ -20,7 +21,7 @@ const MoviesDetailsPage = ({ movie = {}, t, onDeleteMovie }) => (
     </div>
     <div className={styles.content}>
       <div className={styles.title}>
-        { movie.title }
+        { movie.title } <MyFavoriteIco isShow={movie.is_favorite} />
       </div>
       <div className={styles.info}>
         <p>{ movie.year }</p>

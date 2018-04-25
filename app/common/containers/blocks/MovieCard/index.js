@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from 'withStyles';
 import { compose } from 'recompose';
 import Poster from '@/components/Poster';
+import MyFavoriteIco from '@/components/MyFavoriteIco';
 
 import styles from './styles.scss';
 
@@ -13,6 +14,7 @@ const MovieCard = ({ movie, ...rest }) => (
     </div>
     <div className={styles.content}>
       <div className={styles.title}>
+        <MyFavoriteIco isShow={movie.is_favorite} />
         { movie.title }
       </div>
     </div>
