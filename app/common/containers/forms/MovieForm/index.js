@@ -14,7 +14,7 @@ import { reduxFormValidate } from 'react-nebo15-validate';
 const MovieForm = ({ initialValues, handleSubmit, t }) => {
 
   const isInitialValues = initialValues.id;
-  const buttonText = isInitialValues ? 'Update' : 'Create';
+  const buttonText = isInitialValues ? t('Update') : t('Create');
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -34,7 +34,7 @@ const MovieForm = ({ initialValues, handleSubmit, t }) => {
         <Field component={FormField} inputComponent={TextInput} name="director" />
       </FormRow>
       <FormRow>
-        <Button type="submit">{t(buttonText)}</Button>
+        <Button type="submit">{buttonText}</Button>
       </FormRow>
     </Form>
   );
