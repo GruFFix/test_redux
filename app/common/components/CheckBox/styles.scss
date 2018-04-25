@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+.root {
+  padding: 12px;
+  border: 1px solid $blue-grey;
+  border-radius: 3px;
+  display: block;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+
+  &:checked {
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: $blue;
+      border-radius: 2px;
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.isError {
+  border-color: $red;
+}
