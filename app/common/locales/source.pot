@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-04-25T08:01:04.801Z\n"
-"PO-Revision-Date: 2018-04-25T08:01:04.801Z\n"
+"POT-Creation-Date: 2018-04-25T10:30:54.361Z\n"
+"PO-Revision-Date: 2018-04-25T10:30:54.361Z\n"
 
 msgid "Required field"
 msgstr ""
@@ -30,6 +30,9 @@ msgid "Year"
 msgstr ""
 
 msgid "Director"
+msgstr ""
+
+msgid "My favorite"
 msgstr ""
 
 msgid "Create new movie"
