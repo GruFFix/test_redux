@@ -17,6 +17,7 @@ let movies = [
     director: 'Frank Darabont',
     genres: ['Crime', 'Drama'],
     is_favorite: true,
+    actors: [1, 3],
   },
   {
     id: uuid(),
@@ -29,6 +30,7 @@ let movies = [
     director: 'Francis Ford Coppola',
     genres: ['Crime', 'Drama'],
     is_favorite: false,
+    actors: [2],
   },
   {
     id: uuid(),
@@ -41,12 +43,35 @@ let movies = [
     director: 'Christopher Nolan',
     genres: ['Action', 'Crime', 'Drama'],
     is_favorite: false,
+    actors: [2, 3],
   },
 ];
+
+let actors = [
+  {
+    id: 1,
+    name: 'John Doe',
+  },
+  {
+    id: 2,
+    name: 'Bob Smith',
+  },
+  {
+    id: 3,
+    name: 'Oleg Smirnov',
+  },
+];
+
 
 router.get('/movies', (req, res) => {
   res.json({
     data: movies,
+  });
+});
+
+router.get('/actors', (req, res) => {
+  res.json({
+    data: actors,
   });
 });
 
