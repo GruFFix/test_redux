@@ -49,15 +49,15 @@ let movies = [
 
 let actors = [
   {
-    id: 1,
+    id: '1',
     name: 'John Doe',
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bob Smith',
   },
   {
-    id: 3,
+    id: '3',
     name: 'Oleg Smirnov',
   },
 ];
@@ -72,6 +72,31 @@ router.get('/movies', (req, res) => {
 router.get('/actors', (req, res) => {
   res.json({
     data: actors,
+  });
+});
+
+router.get('/actors/:id', (req, res) => {
+  const actor = actors.find(actor => req.params.id == actor.id);
+  if (!actor) {
+    return res.sendStatus(404);
+  }
+  return res.json({
+    data: actor,
+  });
+});
+
+router.put('/actors/:id', (req, res) => {
+  const actroIndex = findIndex(actors, { id: req.params.id });
+
+  if (actroIndex === -1) {
+    return res.sendStatus(404);
+  }
+
+  const updatedMovie = omit(req.body.actor, ['id']);
+  actors[actroIndex] = { ...actors[actroIndex], ...updatedMovie };
+
+  return res.json({
+    data: actors[actroIndex],
   });
 });
 

@@ -23,3 +23,5 @@ export const getForm = (state, formName) => state.form[formName];
 export const getMovie = (state, id) => denormalize(id, schemas.movie, state.data);
 export const getMovies = (state, ids) => ids.map(id => getMovie(state, id));
 export const getAllMovies = state => getMovies(state, Object.keys(state.data.movies));
+
+export const getActor = (state, id) => denormalize(id, schemas.actor, state.data);

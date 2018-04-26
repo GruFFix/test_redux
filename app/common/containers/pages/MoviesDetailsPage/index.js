@@ -33,7 +33,7 @@ const MoviesDetailsPage = ({ movie = {}, t, onDeleteMovie }) => {
           <div>
             Actors: {(movie.actors || []).map((actor, index) =>
               <React.Fragment key={actor.id}>
-                <Link to={`/actros/${actor.id}`}>{actor.name}</Link>
+                <Link to={`/actors/${actor.id}`}>{actor.name}</Link>
 
                 {index < movie.actors.length && ', '}
               </React.Fragment>
