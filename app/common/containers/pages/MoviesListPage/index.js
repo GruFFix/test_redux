@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { provideHooks } from 'redial';
 import { fetchMovies } from '@/redux/data/movies';
+import { fetchActors } from '@/redux/data/actors';
 import { getMovies } from '@/reducers';
 import { translate } from 'react-i18next';
 
@@ -32,8 +33,13 @@ export default compose(
   translate(),
   withRouter,
   provideHooks({
-    fetch: ({ dispatch, setProps }) => dispatch(fetchMovies()).then((response) => {
-      setProps({ moviesIds: response.payload.result });
+    fetch: ({ dispatch, setProps }) => Promise.all([
+      dispatch(fetchMovies()),
+      dispatch(fetchActors()),
+    ]).then((response) => {
+      console.log(response);
+      setProps({ moviesIds: response[0].payload.result });
+      setProps({ actorsIds: response[1].payload.result });
     }),
   }),
   connect((state, ownProps) => ({
